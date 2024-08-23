@@ -14,3 +14,4 @@ This soundfont is designed to leverage the multiple sample nature of the source 
 * TR-808-multi.sfz adds multiple outputs which are customizable in the file.
 * In theory TR-808-multi.sfz should operate in single output players, which should ignore output numbers other than 0. In practice I've found that not always to be the case.
  
+Samples were recorded dry, allowing one to apply processing as desired. The multi output version is probably best for this purpose.
