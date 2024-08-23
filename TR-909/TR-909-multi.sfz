@@ -1,12 +1,17 @@
 /*
 ** ============================================================
 ** Roland TR-909 Rhythm Composer SFZ
-** For use with the FREE TR-909 samples from
+** For use with the free TR-909 samples from
 ** Rob Roy Recordings. Available at as of this writing at
 ** http://machines.hyperreal.org/manufacturers/Roland/TR-909/
-** See TR909SET.TXT and TR909-2.TXT for license and other info.
+**
+** Samples are expected in a samples folder below the one containing the sfz file.
+** if not, edit or remove the default_path line below.
+**
+** See TR909SET.TXT and TR909-2.TXT for samples license and other info.
 ** ============================================================
 */
+
 
 <control>
 default_path=samples/
