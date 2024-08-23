@@ -1,5 +1,4 @@
-
-#Roland TR-808 Rhythm Composer SFZ
+# Roland TR-808 Rhythm Composer SFZ
 Soundfont instrument for use with the free TR-808 samples originally provided by Michael Fischer. 
 Available as of this writing at http://machines.hyperreal.org/manufacturers/Roland/TR-808/. 
 
