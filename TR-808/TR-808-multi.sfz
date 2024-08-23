@@ -2,15 +2,14 @@
 ** ============================================================
 ** Roland TR-808 Rhythm Composer SFZ
 **
-** For use with the free TR-808 samples from
-** Soundfont instrument for use with the FREE TR-808 
-** samples originally provided by Michael Fischer. Available as of this writing at 
+** Soundfont instrument for use with the free TR-808 samples
+** originally provided by Michael Fischer. Available as of this writing at 
 ** http://machines.hyperreal.org/manufacturers/Roland/TR-808/. 
 **
 ** Samples are expected in a samples folder below the one containing the sfz file.
-** if not, edit or remove the default_path line below.
+** If not, edit or remove the default_path line below.
 ** 
-** See TR808SET.TXT and TR808-2.TXT for sanokes license and other info.
+** See TR808SET.TXT and TR808-2.TXT for samples license and other info.
 ** ============================================================
 */
 
