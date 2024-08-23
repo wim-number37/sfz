@@ -5,8 +5,10 @@ Soundfont instrument for use with the FREE TR-909 samples from
 Rob Roy Recordings. Available at as of this writing at
 http://machines.hyperreal.org/manufacturers/Roland/TR-909/
 
+Included here for convenience. Unzip `samples.zip` to the folder containing the sfz files.
+
 See TR909SET.TXT and TR909-2.TXT for license and other info about
-the samples
+the samples.
 
 ---
 
