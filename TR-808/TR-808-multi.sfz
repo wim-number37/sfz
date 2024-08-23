@@ -17,8 +17,29 @@
 <control>
 default_path=samples/
 
+// OUTPUT BUS ASSIGNMENT
+// IGNORED IN SINGLE OUTPUT PLUGIN
+// DOESNT WORK IN SFORZANDO PLAYER
+#define $OUTPUT_BD 0
+#define $OUTPUT_RS 1
+#define $OUTPUT_SD 1
+#define $OUTPUT_CP 1
+#define $OUTPUT_CH 2
+#define $OUTPUT_OH 2
+#define $OUTPUT_LT 3
+#define $OUTPUT_MT 3
+#define $OUTPUT_HT 3
+#define $OUTPUT_LC 3
+#define $OUTPUT_MC 3
+#define $OUTPUT_HC 3
+#define $OUTPUT_CY 4
+#define $OUTPUT_CR 4
+#define $OUTPUT_CB 5
+#define $OUTPUT_CL 5
+
 // KEY ASSIGNMENTS
-// Edit MIDI Note numbers if desired.
+// Default GM Note mapping. 
+// Be careful to only change the numbers, not the variable names.
 #define $KEY_BD 36
 #define $KEY_RS 37
 #define $KEY_SD 38
@@ -139,25 +160,6 @@ label_$CC_CYVOL=CY Vol ($CC_CYVOL)
 label_$CC_CYTONE=CY Tune ($CC_CYTONE)
 label_$CC_CYDEC=CY Decay ($CC_CYDEC)
 label_$CC_CYPAN=CY Pan ($CC_CYPAN)
-
-// OUTPUT BUS ASSIGNMENT
-// IGNORED IN SINGLE OUTPUT PLUGIN
-#define $OUTPUT_BD 0
-#define $OUTPUT_RS 0
-#define $OUTPUT_SD 0
-#define $OUTPUT_CP 0
-#define $OUTPUT_CH 0
-#define $OUTPUT_OH 0
-#define $OUTPUT_LT 0
-#define $OUTPUT_MT 0
-#define $OUTPUT_HT 0
-#define $OUTPUT_LC 0
-#define $OUTPUT_MC 0
-#define $OUTPUT_HC 0
-#define $OUTPUT_CY 0
-#define $OUTPUT_CR 0
-#define $OUTPUT_CB 0
-#define $OUTPUT_CL 0
 
 <global>
 loop_mode=one_shot
