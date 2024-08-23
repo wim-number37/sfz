@@ -1,0 +1,704 @@
+/*
+** ============================================================
+** Roland TR-808 Rhythm Composer SFZ
+**
+** For use with the free TR-808 samples from
+** Soundfont instrument for use with the FREE TR-808 
+** samples originally provided by Michael Fischer. Available as of this writing at 
+** http://machines.hyperreal.org/manufacturers/Roland/TR-808/. 
+**
+** Samples are expected in a samples folder below the one containing the sfz file.
+** if not, edit or remove the default_path line below.
+** 
+** See TR808SET.TXT and TR808-2.TXT for sanokes license and other info.
+** ============================================================
+*/
+
+<control>
+default_path=samples/
+
+// KEY ASSIGNMENTS
+// Edit MIDI Note numbers if desired.
+#define $KEY_BD 36
+#define $KEY_RS 37
+#define $KEY_SD 38
+#define $KEY_CP 39
+#define $KEY_CH 42
+#define $KEY_OH 46
+#define $KEY_LT 41
+#define $KEY_MT 43
+#define $KEY_HT 45
+#define $KEY_HC 62
+#define $KEY_MC 63
+#define $KEY_LC 64
+#define $KEY_CB 56
+#define $KEY_CL 75
+#define $KEY_CY 49
+
+// CC ASSIGNMENTS
+#define $CC_VOL cc7
+#define $CC_BDVOL cc20
+#define $CC_BDTUNE cc21
+#define $CC_BDDEC cc22
+#define $CC_BDPAN cc23
+#define $CC_SDVOL cc24
+#define $CC_SDTONE cc25
+#define $CC_SDSNAP cc26
+#define $CC_SDPAN cc27
+#define $CC_RSCLVOL cc28
+#define $CC_RSCLPAN cc29
+#define $CC_CPVOL cc30
+#define $CC_CPPAN cc31
+#define $CC_CHVOL cc32
+#define $CC_CHPAN cc33
+#define $CC_OHVOL cc34
+#define $CC_OHDEC cc35
+#define $CC_OHPAN cc36
+#define $CC_LTLCVOL cc37
+#define $CC_LTLCTUNE cc38
+#define $CC_LTLCPAN cc39
+#define $CC_MTMCVOL cc37
+#define $CC_MTMCTUNE cc38
+#define $CC_MTMCPAN cc39
+#define $CC_HTHCVOL cc40
+#define $CC_HTHCTUNE cc41
+#define $CC_HTHCPAN cc42
+#define $CC_CBVOL cc43
+#define $CC_CBPAN cc44
+#define $CC_CYVOL cc45
+#define $CC_CYTONE cc46
+#define $CC_CYDEC cc47
+#define $CC_CYPAN cc48
+
+// CONTROL DEFAULTS
+set_$CC_VOL=127
+set_$CC_BDVOL=127
+set_$CC_BDTUNE=63
+set_$CC_BDDEC=75
+set_$CC_BDPAN=63
+set_$CC_SDVOL=127
+set_$CC_SDTONE=63
+set_$CC_SDSNAP=75
+set_$CC_SDPAN=63
+set_$CC_RSCLVOL=127
+set_$CC_RSCLPAN=63
+set_$CC_CPVOL=127
+set_$CC_CPPAN=63
+set_$CC_CHVOL=127
+set_$CC_CHPAN=63
+set_$CC_OHVOL=127
+set_$CC_OHDEC=75
+set_$CC_OHPAN=63
+set_$CC_LTLCVOL=127
+set_$CC_LTLCTUNE=25
+set_$CC_LTLCPAN=63
+set_$CC_MTMCVOL=127
+set_$CC_MTMCTUNE=25
+set_$CC_MTMCPAN=63
+set_$CC_HTHCVOL=127
+set_$CC_HTHCTUNE=25
+set_$CC_HTHCPAN=63
+set_$CC_CBVOL=127
+set_$CC_CBPAN=63
+set_$CC_CYVOL=127
+set_$CC_CYTONE=63
+set_$CC_CYDEC=75
+set_$CC_CYPAN=63
+
+// CONTROL LABELS
+label_$CC_VOL=Volume
+label_$CC_BDVOL=BD Vol
+label_$CC_BDTUNE=BD Tune ($CC_BDTUNE)
+label_$CC_BDDEC=BD Decay ($CC_BDDEC)
+label_$CC_BDPAN=BD Pan ($CC_BDPAN)
+label_$CC_SDVOL=SD Vol ($CC_SDVOL)
+label_$CC_SDTONE=SD Tone ($CC_SDTONE)
+label_$CC_SDSNAP=SD Snappy ($CC_SDSNAP)
+label_$CC_SDPAN=SD Pan ($CC_SDPAN)
+label_$CC_RSCLVOL=RS/CL Vol ($CC_RSCLVOL)
+label_$CC_RSCLPAN=RS/CL Pan ($CC_RSCLPAN)
+label_$CC_CPVOL=CP Vol ($CC_CPVOL)
+label_$CC_CPPAN=CP Pan ($CC_CPPAN)
+label_$CC_CHVOL=CH Vol ($CC_CHVOL)
+label_$CC_CHPAN=CH Pan ($CC_CHPAN)
+label_$CC_OHVOL=OH Vol ($CC_OHVOL)
+label_$CC_OHDEC=OH Decay ($CC_OHDEC)
+label_$CC_OHPAN=OH Pan ($CC_OHPAN)
+label_$CC_LTLCVOL=LT/LC Vol ($CC_LTLCVOL)
+label_$CC_LTLCTUNE=LT/LC Tune ($CC_LTLCTUNE)
+label_$CC_LTLCPAN=LT/LC Pan ($CC_LTLCPAN)
+label_$CC_MTMCVOL=MT/MC Vol ($CC_MTMCVOL)
+label_$CC_MTMCTUNE=MT/MC Tune ($CC_MTMCTUNE)
+label_$CC_MTMCPAN=MT/MC Pan ($CC_MTMCPAN)
+label_$CC_HTHCVOL=HT/HC Vol ($CC_HTHCVOL)
+label_$CC_HTHCTUNE=HT/HC Tune ($CC_HTHCTUNE)
+label_$CC_HTHCPAN=HT/HC Pan ($CC_HTHCPAN)
+label_$CC_CBVOL=CB Vol ($CC_CBVOL)
+label_$CC_CBPAN=CB Pan ($CC_CBPAN)
+label_$CC_CYVOL=CY Vol ($CC_CYVOL)
+label_$CC_CYTONE=CY Tune ($CC_CYTONE)
+label_$CC_CYDEC=CY Decay ($CC_CYDEC)
+label_$CC_CYPAN=CY Pan ($CC_CYPAN)
+
+// OUTPUT BUS ASSIGNMENT
+// IGNORED IN SINGLE OUTPUT PLUGIN
+#define $OUTPUT_BD 0
+#define $OUTPUT_RS 0
+#define $OUTPUT_SD 0
+#define $OUTPUT_CP 0
+#define $OUTPUT_CH 0
+#define $OUTPUT_OH 0
+#define $OUTPUT_LT 0
+#define $OUTPUT_MT 0
+#define $OUTPUT_HT 0
+#define $OUTPUT_LC 0
+#define $OUTPUT_MC 0
+#define $OUTPUT_HC 0
+#define $OUTPUT_CY 0
+#define $OUTPUT_CR 0
+#define $OUTPUT_CB 0
+#define $OUTPUT_CL 0
+
+<global>
+loop_mode=one_shot
+note_polyphony=1
+off_mode=normal
+
+// Bass Drum (BD)
+<group> 
+key=$KEY_BD
+amplitude_on$CC_BDVOL=100
+pan_curve$CC_BDPAN=1
+pan_on$CC_BDPAN=100
+output=$OUTPUT_BD
+<region>
+lo$CC_BDTUNE=0 hi$CC_BDTUNE=24
+lo$CC_BDDEC=0 hi$CC_BDDEC=24
+sample=BD/BD0000.WAV
+<region>
+lo$CC_BDTUNE=0 hi$CC_BDTUNE=24
+lo$CC_BDDEC=25 hi$CC_BDDEC=49
+sample=BD/BD0025.WAV
+<region>
+lo$CC_BDTUNE=0 hi$CC_BDTUNE=24
+lo$CC_BDDEC=50 hi$CC_BDDEC=74
+sample=BD/BD0050.WAV
+<region> 
+lo$CC_BDTUNE=0 hi$CC_BDTUNE=24
+lo$CC_BDDEC=75 hi$CC_BDDEC=99
+sample=BD/BD0075.WAV
+<region>
+lo$CC_BDTUNE=0 hi$CC_BDTUNE=24
+lo$CC_BDDEC=100 hi$CC_BDDEC=127
+sample=BD/BD0010.WAV
+<region>
+lo$CC_BDTUNE=25 hi$CC_BDTUNE=49
+lo$CC_BDDEC=0 hi$CC_BDDEC=24
+sample=BD/BD2500.WAV
+<region>
+lo$CC_BDTUNE=25 hi$CC_BDTUNE=49
+lo$CC_BDDEC=25 hi$CC_BDDEC=49
+sample=BD/BD2525.WAV
+<region>
+lo$CC_BDTUNE=25 hi$CC_BDTUNE=49
+lo$CC_BDDEC=50 hi$CC_BDDEC=74
+sample=BD/BD2550.WAV
+<region>
+lo$CC_BDTUNE=25 hi$CC_BDTUNE=49
+lo$CC_BDDEC=75 hi$CC_BDDEC=99
+sample=BD/BD2575.WAV
+<region>
+lo$CC_BDTUNE=25 hi$CC_BDTUNE=49
+lo$CC_BDDEC=100 hi$CC_BDDEC=127
+sample=BD/BD2510.WAV
+<region>
+lo$CC_BDTUNE=50 hi$CC_BDTUNE=74
+lo$CC_BDDEC=0 hi$CC_BDDEC=24
+sample=BD/BD5000.WAV
+<region>
+lo$CC_BDTUNE=50 hi$CC_BDTUNE=74
+lo$CC_BDDEC=25 hi$CC_BDDEC=49
+sample=BD/BD5025.WAV
+<region>
+lo$CC_BDTUNE=50 hi$CC_BDTUNE=74
+lo$CC_BDDEC=50 hi$CC_BDDEC=74
+sample=BD/BD5050.WAV
+<region>
+lo$CC_BDTUNE=50 hi$CC_BDTUNE=74
+lo$CC_BDDEC=75 hi$CC_BDDEC=99
+sample=BD/BD5075.WAV
+<region>
+lo$CC_BDTUNE=50 hi$CC_BDTUNE=74
+lo$CC_BDDEC=100 hi$CC_BDDEC=127
+sample=BD/BD5010.WAV
+<region>
+lo$CC_BDTUNE=75 hi$CC_BDTUNE=99
+lo$CC_BDDEC=0 hi$CC_BDDEC=24
+sample=BD/BD7500.WAV
+<region>
+lo$CC_BDTUNE=75 hi$CC_BDTUNE=99
+lo$CC_BDDEC=25 hi$CC_BDDEC=49
+sample=BD/BD7525.WAV
+<region>
+lo$CC_BDTUNE=75 hi$CC_BDTUNE=99
+lo$CC_BDDEC=50 hi$CC_BDDEC=74
+sample=BD/BD7550.WAV
+<region>
+lo$CC_BDTUNE=75 hi$CC_BDTUNE=99
+lo$CC_BDDEC=75 hi$CC_BDDEC=99
+sample=BD/BD7575.WAV
+<region>
+lo$CC_BDTUNE=75 hi$CC_BDTUNE=99
+lo$CC_BDDEC=100 hi$CC_BDDEC=127
+sample=BD/BD7510.WAV
+<region>
+lo$CC_BDTUNE=100 hi$CC_BDTUNE=127
+lo$CC_BDDEC=0 hi$CC_BDDEC=24
+sample=BD/BD1000.WAV
+<region>
+lo$CC_BDTUNE=100 hi$CC_BDTUNE=127
+lo$CC_BDDEC=25 hi$CC_BDDEC=49
+sample=BD/BD1025.WAV
+<region>
+lo$CC_BDTUNE=100 hi$CC_BDTUNE=127
+lo$CC_BDDEC=50 hi$CC_BDDEC=74
+sample=BD/BD1050.WAV
+<region>
+lo$CC_BDTUNE=100 hi$CC_BDTUNE=127
+lo$CC_BDDEC=75 hi$CC_BDDEC=99
+sample=BD/BD1075.WAV
+<region>
+lo$CC_BDTUNE=100 hi$CC_BDTUNE=127
+lo$CC_BDDEC=100 hi$CC_BDDEC=127
+sample=BD/BD1010.WAV
+
+// RIM SHOT
+<group>
+key=$KEY_RS
+amplitude_on$CC_RSCLVOL=100
+pan_curve$CC_RSCLPAN=1
+pan_on$CC_RSCLPAN=100
+output=$OUTPUT_RS
+<region>
+sample=RS/RS.WAV
+
+// SNARE DRUM
+<group>
+key=$KEY_SD
+amplitude_on$CC_SDVOL=100
+pan_curve$CC_SDPAN=1
+pan_on$CC_SDPAN=100
+output=$OUTPUT_SD
+<region>
+lo$CC_SDTONE=0 hi$CC_SDTONE=24
+lo$CC_SDSNAP=0 hi$CC_SDSNAP=24
+sample=SD/SD0000.WAV
+<region>
+lo$CC_SDTONE=0 hi$CC_SDTONE=24
+lo$CC_SDSNAP=25 hi$CC_SDSNAP=49
+sample=SD/SD0025.WAV
+<region>
+lo$CC_SDTONE=0 hi$CC_SDTONE=24
+lo$CC_SDSNAP=50 hi$CC_SDSNAP=74
+sample=SD/SD0050.WAV
+<region>
+lo$CC_SDTONE=0 hi$CC_SDTONE=24
+lo$CC_SDSNAP=75 hi$CC_SDSNAP=99
+sample=SD/SD0075.WAV
+<region>
+lo$CC_SDTONE=0 hi$CC_SDTONE=24
+lo$CC_SDSNAP=100 hi$CC_SDSNAP=127
+sample=SD/SD0010.WAV
+<region>
+lo$CC_SDTONE=25 hi$CC_SDTONE=49
+lo$CC_SDSNAP=0 hi$CC_SDSNAP=24
+sample=SD/SD2500.WAV
+<region>
+lo$CC_SDTONE=25 hi$CC_SDTONE=49
+lo$CC_SDSNAP=25 hi$CC_SDSNAP=49
+sample=SD/SD2525.WAV
+<region>
+lo$CC_SDTONE=25 hi$CC_SDTONE=49
+lo$CC_SDSNAP=50 hi$CC_SDSNAP=74
+sample=SD/SD2550.WAV
+<region>
+lo$CC_SDTONE=25 hi$CC_SDTONE=49
+lo$CC_SDSNAP=75 hi$CC_SDSNAP=99
+sample=SD/SD2575.WAV
+<region>
+lo$CC_SDTONE=25 hi$CC_SDTONE=49
+lo$CC_SDSNAP=100 hi$CC_SDSNAP=127
+sample=SD/SD2510.WAV
+<region>
+lo$CC_SDTONE=50 hi$CC_SDTONE=74
+lo$CC_SDSNAP=0 hi$CC_SDSNAP=24
+sample=SD/SD5000.WAV
+<region>
+lo$CC_SDTONE=50 hi$CC_SDTONE=74
+lo$CC_SDSNAP=25 hi$CC_SDSNAP=49
+sample=SD/SD5025.WAV
+<region>
+lo$CC_SDTONE=50 hi$CC_SDTONE=74
+sample=SD/SD5050.WAV
+lo$CC_SDSNAP=50 hi$CC_SDSNAP=74
+<region>
+lo$CC_SDTONE=50 hi$CC_SDTONE=74
+lo$CC_SDSNAP=75 hi$CC_SDSNAP=99
+sample=SD/SD5075.WAV
+<region>
+lo$CC_SDTONE=50 hi$CC_SDTONE=74
+lo$CC_SDSNAP=100 hi$CC_SDSNAP=127
+sample=SD/SD5010.WAV
+<region>
+lo$CC_SDTONE=75 hi$CC_SDTONE=99
+lo$CC_SDSNAP=0 hi$CC_SDSNAP=24
+sample=SD/SD7500.WAV
+<region>
+lo$CC_SDTONE=75 hi$CC_SDTONE=99
+lo$CC_SDSNAP=25 hi$CC_SDSNAP=49
+sample=SD/SD7525.WAV
+<region>
+lo$CC_SDTONE=75 hi$CC_SDTONE=99
+lo$CC_SDSNAP=50 hi$CC_SDSNAP=74
+sample=SD/SD7550.WAV
+<region>
+lo$CC_SDTONE=75 hi$CC_SDTONE=99
+lo$CC_SDSNAP=75 hi$CC_SDSNAP=99
+sample=SD/SD7575.WAV
+<region>
+lo$CC_SDTONE=75 hi$CC_SDTONE=99
+lo$CC_SDSNAP=100 hi$CC_SDSNAP=127
+sample=SD/SD7510.WAV
+<region>
+lo$CC_SDTONE=100 hi$CC_SDTONE=127
+lo$CC_SDSNAP=0 hi$CC_SDSNAP=24
+sample=SD/SD1000.WAV
+<region>
+lo$CC_SDTONE=100 hi$CC_SDTONE=127
+lo$CC_SDSNAP=25 hi$CC_SDSNAP=49
+sample=SD/SD1025.WAV
+<region>
+lo$CC_SDTONE=100 hi$CC_SDTONE=127
+lo$CC_SDSNAP=50 hi$CC_SDSNAP=74
+sample=SD/SD1050.WAV
+<region>
+lo$CC_SDTONE=100 hi$CC_SDTONE=127
+lo$CC_SDSNAP=75 hi$CC_SDSNAP=99
+sample=SD/SD1075.WAV
+<region>
+lo$CC_SDTONE=100 hi$CC_SDTONE=127
+lo$CC_SDSNAP=100 hi$CC_SDSNAP=127
+sample=SD/SD1010.WAV
+
+// HAND CLAP
+<group>
+key=$KEY_CP
+amplitude_on$CC_CPVOL=100
+pan_curve$CC_CPPAN=1
+pan_on$CC_CPPAN=100
+output=$OUTPUT_CP
+<region>
+sample=CP/CP.WAV
+
+// CLOSED HI HAT
+<group>
+key=$KEY_CH
+group=1
+off_by=1
+amplitude_on$CC_CHVOL=100
+pan_curve$CC_CHPAN=1
+pan_on$CC_CHPAN=100
+output=$OUTPUT_CH
+<region>
+sample=CH/CH.WAV
+
+// OPEN HI HAT
+<group>
+key=$KEY_OH
+group=1
+off_by=1
+amplitude_on$CC_OHVOL=100
+pan_curve$CC_OHPAN=1
+pan_on$CC_OHPAN=100
+output=$OUTPUT_OH
+<region>
+lo$CC_OHDEC=0 hi$CC_OHDEC=24
+sample=OH/OH00.WAV
+<region>
+lo$CC_OHDEC=25 hi$CC_OHDEC=49
+sample=OH/OH25.WAV
+<region>
+lo$CC_OHDEC=50 hi$CC_OHDEC=74
+sample=OH/OH50.WAV
+<region>
+lo$CC_OHDEC=75 hi$CC_OHDEC=99
+sample=OH/OH75.WAV
+<region>
+lo$CC_OHDEC=100 hi$CC_OHDEC=127
+sample=OH/OH10.WAV
+
+// LOW TOM
+<group>
+key=$KEY_LT
+amplitude_on$CC_LTLCVOL=100
+pan_curve$CC_LTLCPAN=1
+pan_on$CC_LTLCPAN=100
+output=$OUTPUT_LT
+<region>
+lo$CC_LTLCTUNE=0 hi$CC_LTLCTUNE=24
+sample=LT/LT00.WAV
+<region>
+lo$CC_LTLCTUNE=25 hi$CC_LTLCTUNE=49
+sample=LT/LT25.WAV
+<region>
+lo$CC_LTLCTUNE=50 hi$CC_LTLCTUNE=74
+sample=LT/LT50.WAV
+<region>
+lo$CC_LTLCTUNE=75 hi$CC_LTLCTUNE=99
+sample=LT/LT75.WAV
+<region>
+lo$CC_LTLCTUNE=100 hi$CC_LTLCTUNE=127
+sample=LT/LT10.WAV
+
+// MID TOM
+<group>
+key=$KEY_MT
+amplitude_on$CC_MTMCVOL=100
+pan_curve$CC_MTMCPAN=1
+pan_on$CC_MTMCPAN=100
+output=$OUTPUT_MT
+<region>
+lo$CC_MTMCTUNE=0 hi$CC_MTMCTUNE=24
+sample=MT/MT00.WAV
+<region>
+lo$CC_MTMCTUNE=25 hi$CC_MTMCTUNE=49
+sample=MT/MT25.WAV
+<region>
+lo$CC_MTMCTUNE=50 hi$CC_MTMCTUNE=74
+sample=MT/MT50.WAV
+<region>
+lo$CC_MTMCTUNE=75 hi$CC_MTMCTUNE=99
+sample=MT/MT75.WAV
+<region>
+lo$CC_MTMCTUNE=100 hi$CC_MTMCTUNE=127
+sample=MT/MT10.WAV
+
+// HIGH TOM
+<group>
+key=$KEY_HT
+amplitude_on$CC_HTHCVOL=100
+pan_curve$CC_HTHCPAN=1
+pan_on$CC_HTHCPAN=100
+output=$OUTPUT_HT
+<region>
+lo$CC_HTHCTUNE=0 hi$CC_HTHCTUNE=24
+sample=HT/HT00.WAV
+<region>
+lo$CC_HTHCTUNE=25 hi$CC_HTHCTUNE=49
+sample=HT/HT25.WAV
+<region>
+lo$CC_HTHCTUNE=50 hi$CC_HTHCTUNE=74
+sample=HT/HT50.WAV
+<region>
+lo$CC_HTHCTUNE=75 hi$CC_HTHCTUNE=99
+sample=HT/HT75.WAV
+<region>
+lo$CC_HTHCTUNE=100 hi$CC_HTHCTUNE=127
+sample=HT/HT10.WAV
+
+// LOW CONGA
+<group>
+key=$KEY_LC
+amplitude_on$CC_LTLCVOL=100
+pan_curve$CC_LTLCPAN=1
+pan_on$CC_LTLCPAN=100
+output=$OUTPUT_LT
+<region>
+lo$CC_LTLCTUNE=0 hi$CC_LTLCTUNE=24
+sample=LC/LC00.WAV
+<region>
+lo$CC_LTLCTUNE=25 hi$CC_LTLCTUNE=49
+sample=LC/LC25.WAV
+<region>
+lo$CC_LTLCTUNE=50 hi$CC_LTLCTUNE=74
+sample=LC/LC50.WAV
+<region>
+lo$CC_LTLCTUNE=75 hi$CC_LTLCTUNE=99
+sample=LC/LC75.WAV
+<region>
+lo$CC_LTLCTUNE=100 hi$CC_LTLCTUNE=127
+sample=LC/LC10.WAV
+
+// MID CONGA
+<group>
+key=$KEY_MC
+amplitude_on$CC_MTMCVOL=100
+pan_curve$CC_MTMCPAN=1
+pan_on$CC_MTMCPAN=100
+output=$OUTPUT_MC
+<region>
+lo$CC_MTMCTUNE=0 hi$CC_MTMCTUNE=24
+sample=MC/MC00.WAV
+<region>
+lo$CC_MTMCTUNE=25 hi$CC_MTMCTUNE=49
+sample=MC/MC25.WAV
+<region>
+lo$CC_MTMCTUNE=50 hi$CC_MTMCTUNE=74
+sample=MC/MC50.WAV
+<region>
+lo$CC_MTMCTUNE=75 hi$CC_MTMCTUNE=99
+sample=MC/MC75.WAV
+<region>
+lo$CC_MTMCTUNE=100 hi$CC_MTMCTUNE=127
+sample=MC/MC10.WAV
+
+// HIGH CONGA
+<group>
+key=$KEY_HC
+amplitude_on$CC_HTHCVOL=100
+pan_curve$CC_HTHCPAN=1
+pan_on$CC_HTHCPAN=100
+output=$OUTPUT_HT
+<region>
+lo$CC_HTHCTUNE=0 hi$CC_HTHCTUNE=24
+sample=HC/HC00.WAV
+<region>
+lo$CC_HTHCTUNE=25 hi$CC_HTHCTUNE=49
+sample=HC/HC25.WAV
+<region>
+lo$CC_HTHCTUNE=50 hi$CC_HTHCTUNE=74
+sample=HC/HC50.WAV
+<region>
+lo$CC_HTHCTUNE=75 hi$CC_HTHCTUNE=99
+sample=HC/HC75.WAV
+<region>
+lo$CC_HTHCTUNE=100 hi$CC_HTHCTUNE=127
+sample=HC/HC10.WAV
+
+// COW BELL
+<group>
+key=$KEY_CB
+amplitude_on$CC_CBVOL=100
+pan_curve$CC_CBPAN=1
+pan_on$CC_CBPAN=100
+output=$OUTPUT_CB
+<region>
+sample=CB/CB.WAV
+
+// CLAVES
+<group>
+key=$KEY_CL
+amplitude_on$CC_RSCLVOL=100
+pan_curve$CC_RSCLPAN=1
+pan_on$CC_RSCLPAN=100
+output=$OUTPUT_RS
+<region>
+sample=CL/CL.WAV
+
+// CYMBAL
+<group>
+key=$KEY_CY
+amplitude_on$CC_CYVOL=100
+pan_curve$CC_CYPAN=1
+pan_on$CC_CYPAN=100
+output=$OUTPUT_CY
+<region>
+lo$CC_CYTONE=0 hi$CC_CYTONE=24
+lo$CC_CYDEC=0 hi$CC_CYDEC=24
+sample=CY/CY0000.WAV
+<region>
+lo$CC_CYTONE=0 hi$CC_CYTONE=24
+lo$CC_CYDEC=25 hi$CC_CYDEC=49
+sample=CY/CY0025.WAV
+<region>
+lo$CC_CYTONE=0 hi$CC_CYTONE=24
+lo$CC_CYDEC=50 hi$CC_CYDEC=74
+sample=CY/CY0050.WAV
+<region>
+lo$CC_CYTONE=0 hi$CC_CYTONE=24
+lo$CC_CYDEC=75 hi$CC_CYDEC=99
+sample=CY/CY0075.WAV
+<region>
+lo$CC_CYTONE=0 hi$CC_CYTONE=24
+lo$CC_CYDEC=100 hi$CC_CYDEC=127
+sample=CY/CY0010.WAV
+<region>
+lo$CC_CYTONE=25 hi$CC_CYTONE=49
+lo$CC_CYDEC=0 hi$CC_CYDEC=24
+sample=CY/CY2500.WAV
+<region>
+lo$CC_CYTONE=25 hi$CC_CYTONE=49
+lo$CC_CYDEC=25 hi$CC_CYDEC=49
+sample=CY/CY2525.WAV
+<region>
+lo$CC_CYTONE=25 hi$CC_CYTONE=49
+lo$CC_CYDEC=50 hi$CC_CYDEC=74
+sample=CY/CY2550.WAV
+<region>
+lo$CC_CYTONE=25 hi$CC_CYTONE=49
+lo$CC_CYDEC=75 hi$CC_CYDEC=99
+sample=CY/CY2575.WAV
+<region>
+lo$CC_CYTONE=25 hi$CC_CYTONE=49
+lo$CC_CYDEC=100 hi$CC_CYDEC=127
+sample=CY/CY2510.WAV
+<region>
+lo$CC_CYTONE=50 hi$CC_CYTONE=74
+lo$CC_CYDEC=0 hi$CC_CYDEC=24
+sample=CY/CY5000.WAV
+<region>
+lo$CC_CYTONE=50 hi$CC_CYTONE=74
+lo$CC_CYDEC=25 hi$CC_CYDEC=49
+sample=CY/CY5025.WAV
+<region>
+lo$CC_CYTONE=50 hi$CC_CYTONE=74
+sample=CY/CY5050.WAV
+lo$CC_CYDEC=50 hi$CC_CYDEC=74
+<region>
+lo$CC_CYTONE=50 hi$CC_CYTONE=74
+lo$CC_CYDEC=75 hi$CC_CYDEC=99
+sample=CY/CY5075.WAV
+<region>
+lo$CC_CYTONE=50 hi$CC_CYTONE=74
+lo$CC_CYDEC=100 hi$CC_CYDEC=127
+sample=CY/CY5010.WAV
+<region>
+lo$CC_CYTONE=75 hi$CC_CYTONE=99
+lo$CC_CYDEC=0 hi$CC_CYDEC=24
+sample=CY/CY7500.WAV
+<region>
+lo$CC_CYTONE=75 hi$CC_CYTONE=99
+lo$CC_CYDEC=25 hi$CC_CYDEC=49
+sample=CY/CY7525.WAV
+<region>
+lo$CC_CYTONE=75 hi$CC_CYTONE=99
+lo$CC_CYDEC=50 hi$CC_CYDEC=74
+sample=CY/CY7550.WAV
+<region>
+lo$CC_CYTONE=75 hi$CC_CYTONE=99
+lo$CC_CYDEC=75 hi$CC_CYDEC=99
+sample=CY/CY7575.WAV
+<region>
+lo$CC_CYTONE=75 hi$CC_CYTONE=99
+lo$CC_CYDEC=100 hi$CC_CYDEC=127
+sample=CY/CY7510.WAV
+<region>
+lo$CC_CYTONE=100 hi$CC_CYTONE=127
+lo$CC_CYDEC=0 hi$CC_CYDEC=24
+sample=CY/CY1000.WAV
+<region>
+lo$CC_CYTONE=100 hi$CC_CYTONE=127
+lo$CC_CYDEC=25 hi$CC_CYDEC=49
+sample=CY/CY1025.WAV
+<region>
+lo$CC_CYTONE=100 hi$CC_CYTONE=127
+lo$CC_CYDEC=50 hi$CC_CYDEC=74
+sample=CY/CY1050.WAV
+<region>
+lo$CC_CYTONE=100 hi$CC_CYTONE=127
+lo$CC_CYDEC=75 hi$CC_CYDEC=99
+sample=CY/CY1075.WAV
+<region>
+lo$CC_CYTONE=100 hi$CC_CYTONE=127
+lo$CC_CYDEC=100 hi$CC_CYDEC=127
+sample=CY/CY1010.WAV
