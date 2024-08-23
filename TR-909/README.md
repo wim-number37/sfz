@@ -12,7 +12,7 @@ the samples.
 
 ---
 
-This soundfont is designed to leverage the multiple sample nature of the source set.
+This soundfont is designed to leverage the multiple sample nature of the source set, which includes samples at a selection of knob settings on the original hardware. See the CC controls for the various "knobs". Panning controls for each sound, while not on the 909, are added here for convenience.
 
 * Notes are mapped to the General Midi (GM) Drum map. Note numbers can be edited to taste in the section at the beginning of the file.
 * TR-909.sfz outputs everything to a single stereo pair.
