@@ -1,5 +1,5 @@
 # Roland TR-505 Drum Machine SFZ
-Soundfont instrument for use with the free TR-505. Available as of this writing at http://machines.hyperreal.org/manufacturers/Roland/TR-505/. 
+Soundfont instrument for use with the free TR-505 samples vailable as of this writing at http://machines.hyperreal.org/manufacturers/Roland/TR-505/. 
 
 Samples are expected in a samples folder below the one containing the sfz file.
 if not, edit or remove the default_path line below. 
