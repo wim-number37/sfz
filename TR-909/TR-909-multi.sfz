@@ -67,8 +67,8 @@ default_path=samples/
 #define $CC_CHLVL cc35  //Closed Hat Level
 #define $CC_CHPAN cc36  //Closed Hat Pan
 #define $CC_OHDEC cc37  //Open Hat Decay
-#define $CC_OHPAN cc38  //Closed Hat Pan
-#define $CC_OHLVL cc39  //Closed Hat Level
+#define $CC_OHLVL cc38  //Closed Hat Level
+#define $CC_OHPAN cc39  //Closed Hat Pan
 #define $CC_PHMODE cc40 //Pedal Hat Combination
 #define $CC_PHLVL cc41  //Pedal Hat Level
 #define $CC_PHPAN cc42  //Pedal Hat Pan
