@@ -4,7 +4,7 @@ Soundfont instrument for use with the free TR-606 samples available as of this w
 Samples are expected in a samples folder below the one containing the sfz file.
 if not, edit or remove the default_path line below. 
 
-See roland.tr-606.txt further info.
+See tr-606kit.txt further info.
 
 Level and panning controls for each sound, while not on the 606, are added here for convenience.
 
