@@ -1,0 +1,255 @@
+/*
+** ============================================================
+** Roland TR-727 Drum Machine SFZ
+** For use with the free TR-707 samples from
+** http://machines.hyperreal.org/manufacturers/Roland/TR-707/
+**
+** Samples are expected in a samples folder below the one containing the sfz file.
+** if not, edit or remove the default_path line below.
+** ============================================================
+*/
+
+<control>
+default_path=samples/
+
+// Default GM Note mapping. 
+// Be careful to only change the numbers, not the variable names.
+#define $KEY_BGH 60 //Hi Bongo
+#define $KEY_BGL 61 //Low Bongo
+#define $KEY_HCM 62 //Hi Conga Mute
+#define $KEY_HCO 63 //Hi Conga Open
+#define $KEY_LC 64  //Low Conga
+#define $KEY_HTB 65 //High Timbale
+#define $KEY_LTB 66 //Low Timbale
+#define $KEY_CS 69  //Cabasa
+#define $KEY_MC 70  //Maracas
+#define $KEY_WS 71  //Short Whistle
+#define $KEY_WL 72  //Long Whistle
+#define $KEY_QJ 73  //Quijada
+#define $KEY_SC 74  //Star Chime
+
+//   CC number assignments for controls
+#define $CC_BGHLVL cc50
+#define $CC_BGHPAN cc51
+#define $CC_BGLLVL cc52  
+#define $CC_BGLPAN cc53
+#define $CC_HCMLVL cc54
+#define $CC_HCMPAN cc55
+#define $CC_HCOLVL cc56
+#define $CC_HCOPAN cc57
+#define $CC_LCLVL cc58
+#define $CC_LCPAN cc59
+#define $CC_LTBLVL cc60
+#define $CC_LTBPAN cc61
+#define $CC_HTBLVL cc62
+#define $CC_HTBPAN cc63
+#define $CC_CSLVL cc68
+#define $CC_CSPAN cc69
+#define $CC_MCLVL cc70
+#define $CC_MCPAN cc71
+#define $CC_WSLVL cc72
+#define $CC_WSPAN cc73
+#define $CC_WLLVL cc74
+#define $CC_WLPAN cc75
+#define $CC_QJLVL cc76
+#define $CC_QJPAN cc77
+#define $CC_SCLVL cc78
+#define $CC_SCPAN cc79
+
+// Initial Settings
+set_$CC_BGHLVL=127
+set_$CC_BGHPAN=63.5
+set_$CC_BGLLVL=127
+set_$CC_BGLPAN=63.5
+set_$CC_HCMLVL=127
+set_$CC_HCMPAN=63.5
+set_$CC_HCOLVL=127
+set_$CC_HCOPAN=63.5
+set_$CC_LCLVL=127
+set_$CC_LCPAN=63.5
+set_$CC_HTBLVL=127
+set_$CC_HTBPAN=63.5
+set_$CC_LTBLVL=127
+set_$CC_LTBPAN=63.5
+set_$CC_CSPAN=63.5
+set_$CC_CSLVL=127
+set_$CC_MCLVL=127
+set_$CC_MCPAN=63.5
+set_$CC_WSLVL=127
+set_$CC_WSPAN=63.5
+set_$CC_WLLVL=127
+set_$CC_WLPAN=63.5
+set_$CC_QJLVL=127
+set_$CC_QJPAN=63.5
+set_$CC_SCLVL=127
+set_$CC_SCPAN=63.5
+
+// Labels
+label_$CC_BGLLVL=Low Bongo Lvl ($CC_BGLLVL)
+label_$CC_BGLPAN=Low Bongo Pan ($CC_BGLPAN)
+label_$CC_BGHLVL=Hi Bongo Lvl ($CC_BGHLVL)
+label_$CC_BGHPAN=Hi Bongo Pan ($CC_BGHPAN)
+label_$CC_HCMLVL=Mute HC Lvl ($CC_HCMLVL)
+label_$CC_HCMPAN=Mute HC Pan ($CC_HCMPAN)
+label_$CC_HCOLVL=Open HC Lvl ($CC_HCOLVL)
+label_$CC_HCOPAN=Open HC Pan ($CC_HCOPAN)
+label_$CC_LCLVL=Lo Conga Level ($CC_LCLVL)
+label_$CC_LCPAN=Lo Conga Pan ($CC_LCPAN)
+label_$CC_HTBLVL=HT Level ($CC_HTBLVL)
+label_$CC_HTBPAN=HT Pan ($CC_HTBPAN)
+label_$CC_LTBLVL=MT Level ($CC_LTBLVL)
+label_$CC_LTBPAN=MT Pan ($CC_LTBPAN)
+label_$CC_CSLVL=Cabasa Lvl ($CC_CSLVL)
+label_$CC_CSPAN=Cabasa Pan ($CC_CSPAN)
+label_$CC_MCLVL=Maracas Lvl ($CC_MCLVL)
+label_$CC_MCPAN=Maracas Pan ($CC_MCPAN)
+label_$CC_WSLVL=Sh Whist Lvl ($CC_WSLVL)
+label_$CC_WSPAN=Sh Whist Pan ($CC_WSPAN)
+label_$CC_WLLVL=Lng Whist Lvl($CC_WLLVL)
+label_$CC_WLPAN=Lng whist Pan ($CC_WLPAN)
+label_$CC_QJLVL=Quij Lvl ($CC_QJLVL)
+label_$CC_QJPAN=Quij Pan ($CC_QJPAN)
+label_$CC_SCLVL=Chime Lvl ($CC_SCLVL)
+label_$CC_SCPAN=Chime Pan ($CC_SCPAN)
+
+// MULTI-OUTPUT SETTINGS
+// Numbers other than zero should be ignored
+// by non multi capable players. But some,
+// such as Sforzando may need these to always be zero
+#define $OUTPUT_BGL 0
+#define $OUTPUT_BGH 0
+#define $OUTPUT_HCM 0
+#define $OUTPUT_HCO 0
+#define $OUTPUT_LC 0
+#define $OUTPUT_LTB 0
+#define $OUTPUT_HTB 0
+#define $OUTPUT_CS 0
+#define $OUTPUT_MC 0
+#define $OUTPUT_WS 0
+#define $OUTPUT_WL 0
+#define $OUTPUT_QJ 0
+#define $OUTPUT_SC 0
+
+<global>
+loop_mode=one_shot
+note_polyphony=1
+off_mode=normal
+// ampeg_release=0.07
+
+// HIGH BONGO
+<group>
+key=$KEY_BGH
+amplitude_on$CC_BGHLVL=100
+pan_curve$CC_BGHPAN=1
+pan_on$CC_BGHPAN=100
+output=$OUTPUT_BGH
+<region> sample=727 HI BONGO.WAV
+
+// LOW BONGO
+<group>
+key=$KEY_BGL
+amplitude_on$CC_BGLLVL=100
+pan_curve$CC_BGLPAN=1
+pan_on$CC_BGLPAN=100
+output=$OUTPUT_BGL
+<region> 
+sample=727 LO BONGO.WAV
+
+// MUTE HIGH CONGA
+<group>
+key=$KEY_HCM
+amplitude_on$CC_HCMLVL=100
+pan_curve$CC_HCMPAN=1
+pan_on$CC_HCMPAN=100
+output=$OUTPUT_HCM
+<region> sample=727 HM CONGA.WAV
+
+// OPEN HI CONGA
+<group>
+key=$KEY_HCO
+amplitude_on$CC_HCOLVL=100
+pan_curve$CC_HCOPAN=1
+pan_on$CC_HCOPAN=100
+output=$OUTPUT_HCO
+<region> sample=727 HO CONGA.WAV
+
+// LOW CONGA
+<group>
+key=$KEY_LC
+amplitude_on$CC_LCLVL=100
+pan_curve$CC_LCPAN=1
+pan_on$CC_LCPAN=100
+output=$OUTPUT_LC
+<region> sample=727 LO CONGA.WAV
+
+// HI TIMBALE
+<group>
+key=$KEY_HTB
+amplitude_on$CC_HTBLVL=100
+pan_curve$CC_HTBPAN=1
+pan_on$CC_HTBPAN=100
+output=$OUTPUT_HTB
+<region> sample=727 HI TIMBA.WAV
+
+// LOW TIMBALE
+<group>
+key=$KEY_LTB
+amplitude_on$CC_LTBLVL=100
+pan_curve$CC_LTBPAN=1
+pan_on$CC_LTBPAN=100
+output=$OUTPUT_LTB
+<region> sample=727 LO TIMBA.WAV
+
+// CABASA
+<group>
+key=$KEY_CS
+amplitude_on$CC_CSLVL=100
+pan_curve$CC_CSPAN=1
+pan_on$CC_CSPAN=100
+output=$OUTPUT_CS
+<region> sample=727 CABASA.WAV
+
+// SHORT WHISTLE
+<group>
+key=$KEY_WS
+amplitude_on$CC_WSLVL=100
+pan_curve$CC_WSPAN=1
+pan_on$CC_WSPAN=100
+output=$OUTPUT_WS
+<region> sample=727 S.WHISTL.WAV
+
+// LONG WHISTLE
+<group>
+key=$KEY_WL
+amplitude_on$CC_WLLVL=100
+pan_curve$CC_WLPAN=1
+pan_on$CC_WLPAN=100
+output=$OUTPUT_WL
+<region> sample=727 L.WHISTL.WAV
+
+// QUIJADA
+<group>
+key=$KEY_QJ
+amplitude_on$CC_QJLVL=100
+pan_curve$CC_QJPAN=1
+pan_on$CC_QJPAN=100
+output=$OUTPUT_QJ
+<region> sample=727 QUIJADA.WAV
+
+// STAR CHIME
+<group>
+key=$KEY_SC
+amplitude_on$CC_SCLVL=100
+pan_curve$CC_SCPAN=1
+pan_on$CC_SCPAN=100
+output=$OUTPUT_SC
+<region> sample=727 STARCHIM.WAV
+
+// MARACAS
+<group>
+key=$KEY_MC
+amplitude_on$CC_MCLVL=100
+pan_curve$CC_MCPAN=1
+pan_on$CC_MCPAN=100
+output=$OUTPUT_MC
+<region> sample=727 MARACAS.WAV

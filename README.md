@@ -1,5 +1,6 @@
 # sfz
 A collection of instruments in the [SFZ format](https://sfzformat.com). 
+
 * Tested in [sforzando player](https://www.plogue.com/products/sforzando.html) and [sfizz](https://sfz.tools/sfizz/) on MacOS, and [isfizz](https://www.kiraqtech.jp/blog/isfizz-en/) on iOS/iPadOS.
 * The sfz files are my own creation. They may be freely used, distributed, and modified with or without attribution.
 * If included, included samples are permitted under the sample's license agreement. Re-distribution beyond that is subject to the license agreement included with the sample set.

@@ -1,0 +1,161 @@
+// Roland TR-606 DRUMATIC 
+// Written for TR-606 samples currently available at
+// http://machines.hyperreal.org/manufacturers/Roland/TR-606/samples/tr606kit.zip
+
+<control>
+// Samples should be placed in a subdirectory "samples" below
+// the folder this sfz file is in. Edit the default_path below if not.
+default_path=samples/
+
+// Default key mapping based on the GM Drum map
+// edit note numbers to suit.
+#define $KEY_BD 36    // Bass Drum
+#define $KEY_SD 38    // Snare Drum
+#define $KEY_CH 42    // Closed Hat
+#define $KEY_MH 44    // Open/Closed Combi Hi Hat
+#define $KEY_OH 46    // Open Hat
+#define $KEY_LT 41    // Low Tom
+#define $KEY_HT 45    // Hi Tom
+#define $KEY_CY 49    // Crash Cymbal
+
+// Multi-output numbers for players that support it. Values other than 
+// zero may result in no output in some players. Modify to taste.
+#define $OUTPUT_BD 0
+#define $OUTPUT_SD 1
+#define $OUTPUT_CH 2
+#define $OUTPUT_MH 2
+#define $OUTPUT_OH 2
+#define $OUTPUT_LT 3
+#define $OUTPUT_HT 3
+#define $OUTPUT_CY 4
+
+#define $CC_VOLUME cc7
+#define $CC_PAN cc10
+#define $CC_BDLVL cc20
+#define $CC_BDPAN cc21
+#define $CC_SDLVL cc22
+#define $CC_SDPAN cc23
+#define $CC_CHLVL cc24
+#define $CC_CHPAN cc25
+#define $CC_MHLVL cc27
+#define $CC_MHPAN cc28
+#define $CC_OHLVL cc29
+#define $CC_OHPAN cc30
+#define $CC_LTLVL cc31
+#define $CC_LTPAN cc32
+#define $CC_HTLVL cc33
+#define $CC_HTPAN cc34
+#define $CC_CYLVL cc35
+#define $CC_CYPAN cc36
+
+label_$CC_VOLUME=Master Vol ($CC_VOLUME)
+label_$CC_PAN=Pan ($CC_PAN)
+label_$CC_BDLVL=BD Lvl ($CC_BDLVL)
+label_$CC_BDPAN=BD Pan ($CC_BDPAN)
+label_$CC_SDLVL=SD Lvl ($CC_SDLVL)
+label_$CC_SDPAN=SD Pan ($CC_SDPAN)
+label_$CC_CHLVL=CH Lvl ($CC_CHLVL)
+label_$CC_CHPAN=CH Pan ($CC_CHPAN)
+label_$CC_MHLVL=MH Lvl ($CC_MHLVL)
+label_$CC_MHPAN=MH Pan ($CC_MHPAN)
+label_$CC_OHLVL=OH Lvl ($CC_OHLVL)
+label_$CC_OHPAN=OH Pan ($CC_OHPAN)
+label_$CC_LTLVL=LT Lvl ($CC_LTLVL)
+label_$CC_LTPAN=LT Pan ($CC_LTPAN)
+label_$CC_HTLVL=HT Lvl ($CC_HTLVL)
+label_$CC_HTPAN=HT Pan ($CC_HTPAN)
+label_$CC_CYLVL=CY Lvl ($CC_CYLVL)
+label_$CC_CYPAN=CY Pan ($CC_CYPAN)
+
+set_$CC_BDLVL=127
+set_$CC_BDPAN=63.5
+set_$CC_SDLVL=127
+set_$CC_SDPAN=63.5
+set_$CC_CHLVL=127
+set_$CC_CHPAN=63.5
+set_$CC_MHLVL=127
+set_$CC_MHPAN=63.5
+set_$CC_OHLVL=127
+set_$CC_OHPAN=63.5
+set_$CC_LTLVL=127
+set_$CC_LTPAN=63.5
+set_$CC_HTLVL=127
+set_$CC_HTPAN=63.5
+set_$CC_CYLVL=127
+set_$CC_CYPAN=63.5
+
+<global>
+note_polyphony=1
+loop_mode=one_shot
+off_mode=normal
+
+<group>
+key=$KEY_BD
+amplitude_on$CC_BDLVL=100
+pan_curve$CC_BDPAN=1
+pan_on$CC_BDPAN=100
+output=$OUTPUT_BD
+<region> 
+sample=606BASS.WAV
+
+<group>
+key=$KEY_SD
+amplitude_on$CC_SDLVL=100
+pan_curve$CC_SDPAN=1
+pan_on$CC_SDPAN=100
+output=$OUTPUT_SD
+<region> sample=606SNAR.WAV
+
+<group> // HATS
+key=$KEY_CH
+group=1 
+off_by=1
+amplitude_on$CC_CHLVL=100
+pan_curve$CC_CHPAN=1
+pan_on$CC_CHPAN=100
+output=$OUTPUT_CH
+<region> sample=606CHAT.WAV
+
+<group> // HATS
+key=$KEY_MH
+group=1 
+off_by=1
+amplitude_on$CC_MHLVL=100
+pan_curve$CC_MHPAN=1
+pan_on$CC_MHPAN=100
+output=$OUTPUT_MH
+<region> sample=606MHAT.WAV
+
+<group> // HATS
+key=$KEY_OH
+group=1 
+off_by=1
+amplitude_on$CC_OHLVL=100
+pan_curve$CC_OHPAN=1
+pan_on$CC_OHPAN=100
+output=$OUTPUT_OH
+<region> sample=606OHAT.WAV
+
+<group>
+key=$KEY_LT
+amplitude_on$CC_LTLVL=100
+pan_curve$CC_LTPAN=1
+pan_on$CC_LTPAN=100
+output=$OUTPUT_LT
+<region> sample=606LTOM.WAV
+
+<group>
+key=$KEY_HT
+amplitude_on$CC_HTLVL=100
+pan_curve$CC_HTPAN=1
+pan_on$CC_HTPAN=100
+output=$OUTPUT_HT
+<region> sample=606HTOM.WAV
+
+<group>
+key=$KEY_CY
+amplitude_on$CC_CYLVL=100
+pan_curve$CC_CYPAN=1
+pan_on$CC_CYPAN=100
+output=$OUTPUT_CY
+<region> sample=606CYMB.WAV
