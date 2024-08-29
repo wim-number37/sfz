@@ -1,0 +1,681 @@
+<control>
+// Samples are expected in "samples" folder below the
+// folder with this sfz file. Modify or remove default_path below
+// if that is not the case.
+default_path=samples/
+
+// These default mappings follow the somewhat odd polyphony groups 
+// of the TR-626 for nostalgia sake. Modify them to taste.
+#define $OUTPUT_BD1 0
+#define $OUTPUT_BD2 0
+#define $OUTPUT_SDX 1
+#define $OUTPUT_SD3 5
+#define $OUTPUT_RS 5
+#define $OUTPUT_CP 6
+#define $OUTPUT_LT1 2
+#define $OUTPUT_LT2 2
+#define $OUTPUT_MT1 2
+#define $OUTPUT_MT2 2
+#define $OUTPUT_HT1 2
+#define $OUTPUT_HT2 2
+#define $OUTPUT_CHH 3
+#define $OUTPUT_OHH 3
+#define $OUTPUT_CB 7
+#define $OUTPUT_CL 6
+#define $OUTPUT_LTB 1
+#define $OUTPUT_HTB 1
+#define $OUTPUT_LAG 7
+#define $OUTPUT_HAG 7
+#define $OUTPUT_LC 2
+#define $OUTPUT_OHC 2
+#define $OUTPUT_MHC 6
+#define $OUTPUT_SHK 6
+#define $OUTPUT_CRA 4
+#define $OUTPUT_CHI 4
+#define $OUTPUT_RIDE 4
+
+// GM Drum compatible mapping. Modify to suit
+#define $KEY_BD1 36   //Bass Drum 1
+#define $KEY_BD2 35   //Bass Drum 2
+#define $KEY_SDX 38   //Snare Drum 1/2
+#define $KEY_SD3 40   //Snare Drum 3
+#define $KEY_RS 37    //Cross Stick (Rim Shot)
+#define $KEY_CP 39    //Hand Clap
+#define $KEY_LT1 41   //Low Tom 1 (Low Floor Tom)
+#define $KEY_LT2 45   //Low Tom 2 (Low Tom)
+#define $KEY_MT1 47   //Mid Tom 1 (Low Mid Tom)
+#define $KEY_MT2 48   //Mid Tom 2 (High Mid Tom)
+#define $KEY_HT1 43   //High Tom 1 (High Floor Tom)
+#define $KEY_HT2 50   //High Tom 2 (High Tom)
+#define $KEY_CHH 42   //Closed Hi Hat
+#define $KEY_OHH 46   //Open Hi Hat
+#define $KEY_CB 56    //Cowbell
+#define $KEY_CL 75    //Claves
+#define $KEY_LTB 66   //Low Timbale
+#define $KEY_HTB 65   //High Timbale
+#define $KEY_LAG 67   //Low Agogo
+#define $KEY_HAG 68   //High Agogo
+#define $KEY_LC 64    //Low Conga
+#define $KEY_OHC 62   //Open High Conga
+#define $KEY_MHC 63   //Mute High Conga
+#define $KEY_SHK 70   //Shaker (Maracas)
+#define $KEY_CRA 49   //Crash Cymbal
+#define $KEY_CHI 52   //China Cymbal
+#define $KEY_RIDE 51  //Ride Cymbal
+#define $KEY_TAMB 54  //Tambourine
+#define $KEY_CUP 53   //Cup Cymbal
+
+#define $CHOKE_1 1    //Choke group 1
+
+#define $CC_BD1LVL cc20
+#define $CC_BD1PAN cc21
+#define $CC_BD1TUN cc22
+#define $CC_BD2LVL cc23
+#define $CC_BD2PAN cc24
+#define $CC_BD2TUN cc25
+#define $CC_SDXLVL cc26
+#define $CC_SDXPAN cc27
+#define $CC_SDXTUN cc28
+#define $CC_SD3LVL cc29
+#define $CC_SD3PAN cc30
+#define $CC_SD3TUN cc31
+#define $CC_RSLVL cc32
+#define $CC_RSPAN cc33
+#define $CC_RSTUN cc34
+#define $CC_CPLVL cc35
+#define $CC_CPPAN cc36
+#define $CC_CPTUN cc37
+#define $CC_LT1LVL cc38
+#define $CC_LT1PAN cc39
+#define $CC_LT1TUN cc40
+#define $CC_LT2LVL cc41
+#define $CC_LT2PAN cc42
+#define $CC_LT2TUN cc43
+#define $CC_MT1LVL cc44
+#define $CC_MT1PAN cc45
+#define $CC_MT1TUN cc46
+#define $CC_MT2LVL cc47
+#define $CC_MT2PAN cc48
+#define $CC_MT2TUN cc49
+#define $CC_HT1LVL cc50
+#define $CC_HT1PAN cc51
+#define $CC_HT1TUN cc52
+#define $CC_HT2LVL cc53
+#define $CC_HT2PAN cc54
+#define $CC_HT2TUN cc55
+#define $CC_CHHLVL cc56
+#define $CC_CHHPAN cc57
+#define $CC_CHHTUN cc58
+#define $CC_OHHLVL cc59
+#define $CC_OHHPAN cc60
+#define $CC_OHHTUN cc61
+#define $CC_CBLVL cc62
+#define $CC_CBPAN cc63
+#define $CC_CBTUN cc64
+#define $CC_CLLVL cc62
+#define $CC_CLPAN cc63
+#define $CC_CLTUN cc64
+#define $CC_LTBLVL cc65
+#define $CC_LTBPAN cc66
+#define $CC_LTBTUN cc67
+#define $CC_HTBLVL cc68
+#define $CC_HTBPAN cc69
+#define $CC_HTBTUN cc70
+#define $CC_LAGLVL cc71
+#define $CC_LAGPAN cc72
+#define $CC_LAGTUN cc73
+#define $CC_HAGLVL cc74
+#define $CC_HAGPAN cc75
+#define $CC_HAGTUN cc76
+#define $CC_LCLVL cc77
+#define $CC_LCPAN cc78
+#define $CC_LCTUN cc79
+#define $CC_OHCLVL cc80
+#define $CC_OHCPAN cc81
+#define $CC_OHCTUN cc82
+#define $CC_MHCLVL cc83
+#define $CC_MHCPAN cc84
+#define $CC_MHCTUN cc85
+#define $CC_SHKLVL cc86
+#define $CC_SHKPAN cc87
+#define $CC_SHKTUN cc88
+#define $CC_CRALVL cc89
+#define $CC_CRAPAN cc90
+#define $CC_CRATUN cc91
+#define $CC_CHILVL cc92
+#define $CC_CHIPAN cc93
+#define $CC_CHITUN cc94
+#define $CC_RIDELVL cc95
+#define $CC_RIDEPAN cc96
+#define $CC_RIDETUN cc97
+#define $CC_TAMBLVL cc98
+#define $CC_TAMBPAN cc99
+#define $CC_TAMBTUN cc100
+#define $CC_CUPLVL cc101
+#define $CC_CUPPAN cc102
+#define $CC_CUPTUN cc103
+
+label_cc7=Volume cc7
+label_cc10=Pan cc10
+
+label_$CC_BD1LVL=BD1 Lvl $CC_BD1LVL
+label_$CC_BD1PAN=BD1 Pan $CC_BD1PAN
+label_$CC_BD1TUN=BD1 Tune $CC_BD1TUN
+label_$CC_BD2LVL=BD2 Lvl $CC_BD2LVL
+label_$CC_BD2PAN=BD2 Pan $CC_BD2PAN
+label_$CC_BD2TUN=BD2 Tune $CC_BD2TUN
+label_$CC_SDXLVL=SD1/2 Lvl $CC_SDXLVL
+label_$CC_SDXPAN=SD1/2 Pan $CC_SDXPAN
+label_$CC_SDXTUN=SD1/2 Tune $CC_SDXTUN
+label_$CC_SD3LVL=SD3 Lvl $CC_SD3LVL
+label_$CC_SD3PAN=SD3 Pan $CC_SD3PAN
+label_$CC_SD3TUN=SD3 Tune $CC_SD3TUN
+label_$CC_RSLVL=CS Lvl $CC_RSLVL
+label_$CC_RSPAN=CS Pan $CC_RSPAN
+label_$CC_RSTUN=CS Tune $CC_RSTUN
+label_$CC_CPLVL=CP Lvl $CC_CPLVL
+label_$CC_CPPAN=CP Pan $CC_CPPAN
+label_$CC_CPTUN=CP Tune $CC_CPTUN
+label_$CC_LT1LVL=LT1 Lvl $CC_LT1LVL
+label_$CC_LT1PAN=LT1 Pan $CC_LT1PAN
+label_$CC_LT1TUN=LT1 Tune $CC_LT1TUN
+label_$CC_LT2LVL=LT2 Lvl $CC_LT2LVL
+label_$CC_LT2PAN=LT2 Pan $CC_LT2PAN
+label_$CC_LT2TUN=LT2 Tune $CC_LT2TUN
+label_$CC_MT1LVL=MT1 Lvl $CC_MT1LVL
+label_$CC_MT1PAN=MT1 Pan $CC_MT1PAN
+label_$CC_MT1TUN=MT1 Tune $CC_MT1TUN
+label_$CC_MT2LVL=MT2 Lvl $CC_MT2LVL
+label_$CC_MT2PAN=MT2 Pan $CC_MT2PAN
+label_$CC_MT2TUN=MT2 Tune $CC_MT2TUN
+label_$CC_HT1LVL=HT1 Lvl $CC_HT1LVL
+label_$CC_HT1PAN=HT1 Pan $CC_HT1PAN
+label_$CC_HT1TUN=HT1 Tune $CC_HT1TUN
+label_$CC_HT2LVL=HT2 Lvl $CC_HT2LVL
+label_$CC_HT2PAN=HT2 Pan $CC_HT2PAN
+label_$CC_HT2TUN=HT2 Tune $CC_HT2TUN
+label_$CC_CHHLVL=CH Lvl $CC_CHHLVL
+label_$CC_CHHPAN=CH Pan $CC_CHHPAN
+label_$CC_CHHTUN=CH Tune $CC_CHHTUN
+label_$CC_OHHLVL=OH Lvl $CC_OHHLVL
+label_$CC_OHHPAN=OH Pan $CC_OHHPAN
+label_$CC_OHHTUN=OH Tune $CC_OHHTUN
+label_$CC_CBLVL=CB Lvl $CC_CBLVL
+label_$CC_CBPAN=CB Pan $CC_CBPAN
+label_$CC_CBTUN=CB Tune $CC_CBTUN
+label_$CC_CLLVL=CL Lvl $CC_CLLVL
+label_$CC_CLPAN=CL Pan $CC_CLPAN
+label_$CC_CLTUN=CL Tune $CC_CLTUN
+label_$CC_LTBLVL=LTB Lvl $CC_LTBLVL
+label_$CC_LTBPAN=LTB Pan $CC_LTBPAN
+label_$CC_LTBTUN=LTB Tune $CC_LTBTUN
+label_$CC_HTBLVL=HTB Lvl $CC_HTBLVL
+label_$CC_HTBPAN=HTB Pan $CC_HTBPAN
+label_$CC_HTBTUN=HTB Tune $CC_HTBTUN
+label_$CC_LAGLVL=LAG Lvl $CC_LAGLVL
+label_$CC_LAGPAN=LAG Pan $CC_LAGPAN
+label_$CC_LAGTUN=LAG Tune $CC_LAGTUN
+label_$CC_HAGLVL=HAG Lvl $CC_HAGLVL
+label_$CC_HAGPAN=HAG Pan $CC_HAGPAN
+label_$CC_HAGTUN=HAG Tune $CC_HAGTUN
+label_$CC_LCLVL=LC Lvl $CC_LCLVL
+label_$CC_LCPAN=LC Pan $CC_LCPAN
+label_$CC_LCTUN=LC Tune $CC_LCTUN
+label_$CC_OHCLVL=OHC Lvl $CC_OHCLVL
+label_$CC_OHCPAN=OHC Pan $CC_OHCPAN
+label_$CC_OHCTUN=OHC Tune $CC_OHCTUN
+label_$CC_MHCLVL=MHC Lvl $CC_MHCLVL
+label_$CC_MHCPAN=MHC Pan $CC_MHCPAN
+label_$CC_MHCTUN=MHC Tune $CC_MHCTUN
+label_$CC_SHKLVL=SHA Lvl $CC_SHKLVL
+label_$CC_SHKPAN=SHA Pan $CC_SHKPAN
+label_$CC_SHKTUN=SHA Tune $CC_SHKTUN
+label_$CC_CRALVL=CRA Lvl $CC_CRALVL
+label_$CC_CRAPAN=CRA Pan $CC_CRAPAN
+label_$CC_CRATUN=CRA Tune $CC_CRATUN
+label_$CC_CHILVL=CHI Lvl $CC_CHILVL
+label_$CC_CHIPAN=CHI Pan $CC_CHIPAN
+label_$CC_CHITUN=CHI Tune $CC_CHITUN
+label_$CC_RIDELVL=RIDE Lvl $CC_RIDELVL
+label_$CC_RIDEPAN=RIDE Pan $CC_RIDEPAN
+label_$CC_RIDETUN=RIDE Tune $CC_RIDETUN
+label_$CC_TAMBLVL=TAMB Lvl $CC_TAMBLVL
+label_$CC_TAMBPAN=TAMB Pan $CC_TAMBPAN
+label_$CC_TAMBTUN=TAMB Tune $CC_TAMBTUN
+label_$CC_CUPLVL=CUP Lvl $CC_CUPLVL
+label_$CC_CUPPAN=CUP Pan $CC_CUPPAN
+label_$CC_CUPTUN=CUP Tune $CC_CUPTUN
+
+set_$CC_BD1LVL=127
+set_$CC_BD1PAN=63.5
+set_$CC_BD1TUN=63.5
+set_$CC_BD2LVL=127
+set_$CC_BD2PAN=63.5
+set_$CC_BD2TUN=63.5
+set_$CC_SDXLVL=127
+set_$CC_SDXPAN=63.5
+set_$CC_SDXTUN=63.5
+set_$CC_SD3LVL=127
+set_$CC_SD3PAN=63.5
+set_$CC_SD3TUN=63.5
+set_$CC_RSLVL=127
+set_$CC_RSPAN=63.5
+set_$CC_RSTUN=63.5
+set_$CC_CPLVL=127
+set_$CC_CPPAN=63.5
+set_$CC_CPTUN=63.5
+set_$CC_LT1LVL=127
+set_$CC_LT1PAN=63.5
+set_$CC_LT1TUN=63.5
+set_$CC_LT2LVL=127
+set_$CC_LT2PAN=63.5
+set_$CC_LT2TUN=63.5
+set_$CC_MT1LVL=127
+set_$CC_MT1PAN=63.5
+set_$CC_MT1TUN=63.5
+set_$CC_MT2LVL=127
+set_$CC_MT2PAN=63.5
+set_$CC_MT2TUN=63.5
+set_$CC_HT1LVL=127
+set_$CC_HT1PAN=63.5
+set_$CC_HT1TUN=63.5
+set_$CC_HT2LVL=127
+set_$CC_HT2PAN=63.5
+set_$CC_HT2TUN=63.5
+set_$CC_CHHLVL=127
+set_$CC_CHHPAN=63.5
+set_$CC_CHHTUN=63.5
+set_$CC_OHHLVL=127
+set_$CC_OHHPAN=63.5
+set_$CC_OHHTUN=63.5
+set_$CC_CBLVL=127
+set_$CC_CBPAN=63.5
+set_$CC_CBTUN=63.5
+set_$CC_CLLVL=127
+set_$CC_CLPAN=63.5
+set_$CC_CLTUN=63.5
+set_$CC_LTBLVL=127
+set_$CC_LTBPAN=63.5
+set_$CC_LTBTUN=63.5
+set_$CC_HTBLVL=127
+set_$CC_HTBPAN=63.5
+set_$CC_HTBTUN=63.5
+set_$CC_LAGLVL=127
+set_$CC_LAGPAN=63.5
+set_$CC_LAGTUN=63.5
+set_$CC_HAGLVL=127
+set_$CC_HAGPAN=63.5
+set_$CC_HAGTUN=63.5
+set_$CC_LCLVL=127
+set_$CC_LCPAN=63.5
+set_$CC_LCTUN=63.5
+set_$CC_OHCLVL=127
+set_$CC_OHCPAN=63.5
+set_$CC_OHCTUN=63.5
+set_$CC_MHCLVL=127
+set_$CC_MHCPAN=63.5
+set_$CC_MHCTUN=63.5
+set_$CC_SHKLVL=127
+set_$CC_SHKPAN=63.5
+set_$CC_SHKTUN=63.5
+set_$CC_CRALVL=127
+set_$CC_CRAPAN=63.5
+set_$CC_CRATUN=63.5
+set_$CC_CHILVL=127
+set_$CC_CHIPAN=63.5
+set_$CC_CHITUN=63.5
+set_$CC_RIDELVL=127
+set_$CC_RIDEPAN=63.5
+set_$CC_RIDETUN=63.5
+set_$CC_TAMBLVL=127
+set_$CC_TAMBPAN=63.5
+set_$CC_TAMBTUN=63.5
+set_$CC_CUPLVL=127
+set_$CC_CUPPAN=63.5
+set_$CC_CUPTUN=63.5
+
+<global>
+loop_mode=one_shot
+off_mode=normal
+note_polyphony=1
+sw_lokey=24
+sw_hikey=26
+sw_default=24
+
+<region>  // BASS DRUM 1
+key=$KEY_BD1
+amplitude_on$CC_BD1LVL=100
+pan_on$CC_BD1PAN=100
+pan_curve$CC_BD1PAN=1
+pitch_on$CC_BD1TUN=700
+pitch_curve$CC_BD1TUN=1
+pitch_step$CC_BD1TUN=100
+output=$OUTPUT_BD1
+sample=Kick A.wav
+
+<region>  // BASS DRUM 2
+key=$KEY_BD2
+amplitude_on$CC_BD2LVL=100
+pan_on$CC_BD2PAN=100
+pan_curve$CC_BD2PAN=1
+pitch_on$CC_BD2TUN=700
+pitch_curve$CC_BD2TUN=1
+pitch_step$CC_BD2TUN=100
+output=$OUTPUT_BD2
+sample=Kick B.wav
+
+<region>  // SNARE DRUM 1
+key=$KEY_SDX
+sw_last=24
+sw_label=Snare Drum 1
+amplitude_on$CC_SDXLVL=100
+pan_on$CC_SDXPAN=100
+pan_curve$CC_SDXPAN=1
+pitch_on$CC_SDXTUN=700
+pitch_curve$CC_SDXTUN=1
+pitch_step$CC_SDXTUN=100
+output=$OUTPUT_SDX
+sample=Snare A.wav
+
+<region>  // SNARE DRUM 2
+key=$KEY_SDX
+sw_last=26
+sw_label=Snare Drum 2
+amplitude_on$CC_SDXLVL=100
+pan_on$CC_SDXPAN=100
+pan_curve$CC_SDXPAN=1
+pitch_on$CC_SDXTUN=700
+pitch_curve$CC_SDXTUN=1
+pitch_step$CC_SDXTUN=100
+output=$OUTPUT_SDX
+sample=Snare B.wav
+
+<region>  // SNARE DRUM 3
+key=$KEY_SD3
+amplitude_on$CC_SD3LVL=100
+pan_on$CC_SD3PAN=100
+pan_curve$CC_SD3PAN=1
+pitch_on$CC_SD3TUN=700
+pitch_curve$CC_SD3TUN=1
+pitch_step$CC_SD3TUN=100
+output=$OUTPUT_SD3
+sample=Snare C.wav
+
+<region>  // CROSS STICK (RIMSHOT)
+key=$KEY_RS
+amplitude_on$CC_RSLVL=100
+pan_on$CC_RSPAN=100
+pan_curve$CC_RSPAN=1
+pitch_on$CC_RSTUN=700
+pitch_curve$CC_RSTUN=1
+pitch_step$CC_RSTUN=100
+output=$OUTPUT_RS
+sample=Rimshot.wav
+
+<region>  // HAND CLAP
+key=$KEY_CP
+amplitude_on$CC_CPLVL=100
+pan_on$CC_CPPAN=100
+pan_curve$CC_CPPAN=1
+pitch_on$CC_CPTUN=700
+pitch_curve$CC_CPTUN=1
+pitch_step$CC_CPTUN=100
+output=$OUTPUT_CP
+sample=Handclap.wav
+
+<region>  // LOW TOM 1
+key=$KEY_LT1
+amplitude_on$CC_LT1LVL=100
+pan_on$CC_LT1PAN=100
+pan_curve$CC_LT1PAN=1
+pitch_on$CC_LT1TUN=700
+pitch_curve$CC_LT1TUN=1
+pitch_step$CC_LT1TUN=100
+output=$OUTPUT_LT1
+sample=Low Tom A.wav
+
+<region>  // LOW TOM 2
+key=$KEY_LT2
+amplitude_on$CC_LT2LVL=100
+pan_on$CC_LT2PAN=100
+pan_curve$CC_LT2PAN=1
+pitch_on$CC_LT2TUN=700
+pitch_curve$CC_LT2TUN=1
+pitch_step$CC_LT2TUN=100
+output=$OUTPUT_LT2
+sample=Low Tom B.wav
+
+<region>  // MID TOM 1
+key=$KEY_MT1
+amplitude_on$CC_MT1LVL=100
+pan_on$CC_MT1PAN=100
+pan_curve$CC_MT1PAN=1
+pitch_on$CC_MT1TUN=700
+pitch_curve$CC_MT1TUN=1
+pitch_step$CC_MT1TUN=100
+output=$OUTPUT_MT1
+sample=Mid Tom A.wav
+
+<region>  // MID TOM 2
+key=$KEY_MT2
+amplitude_on$CC_MT2LVL=100
+pan_on$CC_MT2PAN=100
+pan_curve$CC_MT2PAN=1
+pitch_on$CC_MT2TUN=700
+pitch_curve$CC_MT2TUN=1
+pitch_step$CC_MT2TUN=100
+output=$OUTPUT_MT2
+sample=Mid Tom B.wav
+
+<region>  // HIGH TOM 1
+key=$KEY_HT1
+amplitude_on$CC_HT1LVL=100
+pan_on$CC_HT1PAN=100
+pan_curve$CC_HT1PAN=1
+pitch_on$CC_HT1TUN=700
+pitch_curve$CC_HT1TUN=1
+pitch_step$CC_HT1TUN=100
+output=$OUTPUT_HT1
+sample=Hi Tom A.wav
+
+<region>  // HIGH TOM 2
+key=$KEY_HT2
+amplitude_on$CC_HT2LVL=100
+pan_on$CC_HT2PAN=100
+pan_curve$CC_HT2PAN=1
+pitch_on$CC_HT2TUN=700
+pitch_curve$CC_HT2TUN=1
+pitch_step$CC_HT2TUN=100
+output=$OUTPUT_HT2
+sample=Hi Tom B.wav
+
+<region>  // CLOSED HI HAT
+key=$KEY_CHH
+group=$CHOKE_1
+off_by=$CHOKE_1
+amplitude_on$CC_CHHLVL=100
+pan_on$CC_CHHPAN=100
+pan_curve$CC_CHHPAN=1
+pitch_on$CC_CHHTUN=700
+pitch_curve$CC_CHHTUN=1
+pitch_step$CC_CHHTUN=100
+output=$OUTPUT_CHH
+sample=Closed Hat.wav
+
+<region>  // OPEN HI HAT
+key=$KEY_OHH
+group=$CHOKE_1
+off_by=$CHOKE_1
+amplitude_on$CC_OHHLVL=100
+pan_on$CC_OHHPAN=100
+pan_curve$CC_OHHPAN=1
+pitch_on$CC_OHHTUN=700
+pitch_curve$CC_OHHTUN=1
+pitch_step$CC_OHHTUN=100
+output=$OUTPUT_OHH
+sample=Open Hat.wav
+
+<region>  // COWBELL
+key=$KEY_CB
+amplitude_on$CC_CBLVL=100
+pan_on$CC_CBPAN=100
+pan_curve$CC_CBPAN=1
+pitch_on$CC_CBTUN=700
+pitch_curve$CC_CBTUN=1
+pitch_step$CC_CBTUN=100
+output=$OUTPUT_CB
+sample=Cowbell.wav
+
+<region>  // CLAVES
+key=$KEY_CL
+amplitude_on$CC_CLLVL=100
+pan_on$CC_CLPAN=100
+pan_curve$CC_CLPAN=1
+pitch_on$CC_CLTUN=700
+pitch_curve$CC_CLTUN=1
+pitch_step$CC_CLTUN=100
+output=$OUTPUT_CL
+sample=Claves.wav
+
+<region>  // LOW TIMBALE
+key=$KEY_LTB
+amplitude_on$CC_LTBLVL=100
+pan_on$CC_LTBPAN=100
+pan_curve$CC_LTBPAN=1
+pitch_on$CC_LTBTUN=700
+pitch_curve$CC_LTBTUN=1
+pitch_step$CC_LTBTUN=100
+output=$OUTPUT_LTB
+sample=Lo Timbale.wav
+
+<region>  // HIGH TIMBALE
+key=$KEY_HTB
+amplitude_on$CC_HTBLVL=100
+pan_on$CC_HTBPAN=100
+pan_curve$CC_HTBPAN=1
+pitch_on$CC_HTBTUN=700
+pitch_curve$CC_HTBTUN=1
+pitch_step$CC_HTBTUN=100
+output=$OUTPUT_HTB
+sample=Hi Timbale.wav
+
+<region>  // LOW AGOGO
+key=$KEY_LAG
+amplitude_on$CC_LAGLVL=100
+pan_on$CC_LAGPAN=100
+pan_curve$CC_LAGPAN=1
+pitch_on$CC_LAGTUN=700
+pitch_curve$CC_LAGTUN=1
+pitch_step$CC_LAGTUN=100
+output=$OUTPUT_LAG
+sample=Lo Agogo.wav
+
+<region>  // HIGH AGOGO
+key=$KEY_HAG
+amplitude_on$CC_HAGLVL=100
+pan_on$CC_HAGPAN=100
+pan_curve$CC_HAGPAN=1
+pitch_on$CC_HAGTUN=700
+pitch_curve$CC_HAGTUN=1
+pitch_step$CC_HAGTUN=100
+output=$OUTPUT_HAG
+sample=Hi Agogo.wav
+
+<region>  // LOW CONGA
+key=$KEY_LC
+amplitude_on$CC_LCLVL=100
+pan_on$CC_LCPAN=100
+pan_curve$CC_LCPAN=1
+pitch_on$CC_LCTUN=700
+pitch_curve$CC_LCTUN=1
+pitch_step$CC_LCTUN=100
+output=$OUTPUT_LC
+sample=Lo Conga.wav
+
+<region>  // OPEN HIGH CONGA
+key=$KEY_OHC
+amplitude_on$CC_OHCLVL=100
+pan_on$CC_OHCPAN=100
+pan_curve$CC_OHCPAN=1
+pitch_on$CC_OHCTUN=700
+pitch_curve$CC_OHCTUN=1
+pitch_step$CC_OHCTUN=100
+output=$OUTPUT_OHC
+sample=Open Hi Conga.wav
+
+<region>  // MUTE HIGH CONGA
+key=$KEY_MHC
+amplitude_on$CC_MHCLVL=100
+pan_on$CC_MHCPAN=100
+pan_curve$CC_MHCPAN=1
+pitch_on$CC_MHCTUN=700
+pitch_curve$CC_MHCTUN=1
+pitch_step$CC_MHCTUN=100
+output=$OUTPUT_MHC
+sample=Mute Hi Conga.wav
+
+<region>  // SHAKER (MARACAS)
+key=$KEY_SHK
+amplitude_on$CC_SHKLVL=100
+pan_on$CC_SHKPAN=100
+pan_curve$CC_SHKPAN=1
+pitch_on$CC_SHKTUN=700
+pitch_curve$CC_SHKTUN=1
+pitch_step$CC_SHKTUN=100
+output=$OUTPUT_SHK
+sample=Shaker.wav
+
+<region>  // CRASH CYMBAL
+key=$KEY_CRA
+amplitude_on$CC_CRALVL=100
+pan_on$CC_CRAPAN=100
+pan_curve$CC_CRAPAN=1
+pitch_on$CC_CRATUN=700
+pitch_curve$CC_CRATUN=1
+pitch_step$CC_CRATUN=100
+output=$OUTPUT_CRA
+sample=Crash Cymbal.wav
+
+<region>  // CHINA CYMBAL
+key=$KEY_CHI
+amplitude_on$CC_CHILVL=100
+pan_on$CC_CHIPAN=100
+pan_curve$CC_CHIPAN=1
+pitch_on$CC_CHITUN=700
+pitch_curve$CC_CHITUN=1
+pitch_step$CC_CHITUN=100
+output=$OUTPUT_CHI
+sample=China Cymbal.wav
+
+<region>  // RIDE CYMBAL
+key=$KEY_RIDE
+amplitude_on$CC_RIDELVL=100
+pan_on$CC_RIDEPAN=100
+pan_curve$CC_RIDEPAN=1
+pitch_on$CC_RIDETUN=700
+pitch_curve$CC_RIDETUN=1
+pitch_step$CC_RIDETUN=100
+output=$OUTPUT_RIDE
+sample=Ride Cymbal.wav
+
+<region>  // TAMBOURINE
+key=$KEY_TAMB
+amplitude_on$CC_TAMBLVL=100
+pan_on$CC_TAMBPAN=100
+pan_curve$CC_TAMBPAN=1
+pitch_on$CC_TAMBTUN=700
+pitch_curve$CC_TAMBTUN=1
+pitch_step$CC_TAMBTUN=100
+output=$OUTPUT_TAMB
+sample=Tamborine.wav
+
+<region>  // CUP CYMBAL
+key=$KEY_CUP
+amplitude_on$CC_CUPLVL=100
+pan_on$CC_CUPPAN=100
+pan_curve$CC_CUPPAN=1
+pitch_on$CC_CUPTUN=700
+pitch_curve$CC_CUPTUN=1
+pitch_step$CC_CUPTUN=100
+output=$OUTPUT_CUP
+sample=Cup Cymbal.wav
