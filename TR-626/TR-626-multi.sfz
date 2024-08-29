@@ -4,35 +4,36 @@
 // if that is not the case.
 default_path=samples/
 
-// These default mappings follow the somewhat odd polyphony groups 
-// of the TR-626 for nostalgia sake. Modify them to taste.
+// Modify output numbers to taste. These should be ignored in players
+// that don't support multi out but some just output silence for 
+// non zero values.
 #define $OUTPUT_BD1 0
 #define $OUTPUT_BD2 0
 #define $OUTPUT_SDX 1
-#define $OUTPUT_SD3 5
-#define $OUTPUT_RS 5
-#define $OUTPUT_CP 6
+#define $OUTPUT_SD3 1
+#define $OUTPUT_RS 1
+#define $OUTPUT_CP 1
 #define $OUTPUT_LT1 2
 #define $OUTPUT_LT2 2
-#define $OUTPUT_MT1 2
-#define $OUTPUT_MT2 2
-#define $OUTPUT_HT1 2
-#define $OUTPUT_HT2 2
-#define $OUTPUT_CHH 3
-#define $OUTPUT_OHH 3
+#define $OUTPUT_MT1 3
+#define $OUTPUT_MT2 3
+#define $OUTPUT_HT1 4
+#define $OUTPUT_HT2 4
+#define $OUTPUT_CHH 5
+#define $OUTPUT_OHH 5
 #define $OUTPUT_CB 7
-#define $OUTPUT_CL 6
-#define $OUTPUT_LTB 1
-#define $OUTPUT_HTB 1
+#define $OUTPUT_CL 7
+#define $OUTPUT_LTB 7
+#define $OUTPUT_HTB 7
 #define $OUTPUT_LAG 7
 #define $OUTPUT_HAG 7
-#define $OUTPUT_LC 2
-#define $OUTPUT_OHC 2
-#define $OUTPUT_MHC 6
-#define $OUTPUT_SHK 6
-#define $OUTPUT_CRA 4
-#define $OUTPUT_CHI 4
-#define $OUTPUT_RIDE 4
+#define $OUTPUT_LC 7
+#define $OUTPUT_OHC 7
+#define $OUTPUT_MHC 7
+#define $OUTPUT_SHK 7
+#define $OUTPUT_CRA 6
+#define $OUTPUT_CHI 6
+#define $OUTPUT_RIDE 6
 
 // GM Drum compatible mapping. Modify to suit
 #define $KEY_BD1 36   //Bass Drum 1
