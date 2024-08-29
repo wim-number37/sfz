@@ -10,7 +10,7 @@ A collection of instruments in the [SFZ format](https://sfzformat.com).
   * A download with all files in a single directory would have all files in the `samples` folder.
   * A download with files in directories `BD`, `SD`, `CH`, etc. would have those subdirectores below the `samples` folder.
   * Each sfz file should begin with a `default_path=samples/` line for easily changing sample locations if you don't prefer this structure.
-* Most files should have a section near the top for MIDI Note mapping for each sound.
-  * Drum instruments here are mapped to the General Midi (GM) Drum map.
-* I've avoided use of include files in most cases. While I prefer the better organization and portability of include files, I've wanted to keep the file structure as simple as possible for those who aren't familiar with such schemas. For instance, in sfizz/isfizz you can edit a top-level sfz file that is loaded, but wouldn't easily be able to edit other files without an external editor. On iOS that would be somewhat involved for a non technical user.
-  This also tries to minimize the chance of opening a sub-file that wouldn't work as a standalone instrument.
+* Drum kit sfz files should have a section near the top for MIDI Note mapping for each sound.
+  * Drum instruments in this release are mapped to the General Midi (GM) Drum.
+  * Edit the note numbers in this section to taste. sfizz and isfizz provide the ability to edit the file in-app.
+* I've avoided use of include files. While I prefer the better organization and portability of include files, I've wanted to keep the file structure as simple as possible for those who aren't familiar with such schemas. For instance, in sfizz/isfizz you can edit a top-level sfz file that is loaded, but wouldn't easily be able to edit other files without an external editor. On iOS that would be somewhat involved for a non technical user. This is also to minimize the chance of opening a sub-file that wouldn't work as a standalone instrument.
