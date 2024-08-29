@@ -56,18 +56,18 @@ default_path=samples/
 #define $CC_LTLCVOL cc37
 #define $CC_LTLCTUNE cc38
 #define $CC_LTLCPAN cc39
-#define $CC_MTMCVOL cc39
-#define $CC_MTMCTUNE cc40
-#define $CC_MTMCPAN cc41
-#define $CC_HTHCVOL cc42
-#define $CC_HTHCTUNE cc43
-#define $CC_HTHCPAN cc44
-#define $CC_CBVOL cc45
-#define $CC_CBPAN cc46
-#define $CC_CYVOL cc47
-#define $CC_CYTONE cc48
-#define $CC_CYDEC cc49
-#define $CC_CYPAN cc50
+#define $CC_MTMCVOL cc40
+#define $CC_MTMCTUNE cc41
+#define $CC_MTMCPAN cc42
+#define $CC_HTHCVOL cc43
+#define $CC_HTHCTUNE cc44
+#define $CC_HTHCPAN cc45
+#define $CC_CBVOL cc46
+#define $CC_CBPAN cc47
+#define $CC_CYVOL cc48
+#define $CC_CYTONE cc49
+#define $CC_CYDEC cc50
+#define $CC_CYPAN cc51
 
 // CONTROL DEFAULTS
 set_$CC_VOL=127
