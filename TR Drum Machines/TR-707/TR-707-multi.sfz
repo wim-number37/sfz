@@ -61,8 +61,8 @@ default_path=samples/
 #define $CC_RSPAN cc25  //Rim Shot Pan
 #define $CC_SD1LVL cc26  //Snare Drum 1 Level
 #define $CC_SD1PAN cc27  //Snare Drum 1 Pan
-#define $CC_SD2LVL cc28  //Snare Drum 1 Level
-#define $CC_SD2PAN cc29  //Snare Drum 1 Pan
+#define $CC_SD2LVL cc28  //Snare Drum 2 Level
+#define $CC_SD2PAN cc29  //Snare Drum 2 Pan
 #define $CC_CPLVL cc30  //Hand Clap Level
 #define $CC_CPPAN cc31  //Hand Clap Pan
 #define $CC_CHLVL cc32  //Closed Hat Level
@@ -87,8 +87,8 @@ default_path=samples/
 // Initial Settings
 set_$CC_BD1LVL=127   // Bass Drum 1 Level
 set_$CC_BD1PAN=63.5  // Bass Drum 1 Pan
-set_$CC_BD1LVL=127   // Bass Drum 2 Level
-set_$CC_BD1PAN=63.5  // Bass Drum 2 Pan
+set_$CC_BD2LVL=127   // Bass Drum 2 Level
+set_$CC_BD2PAN=63.5  // Bass Drum 2 Pan
 set_$CC_RSLVL=127   // Rim Shot Level
 set_$CC_RSPAN=63.5  // Rim Shot Pan
 set_$CC_SD1LVL=127   // Snare Drum 1 Level
@@ -101,6 +101,7 @@ set_$CC_CHLVL=127   // Closed Hat Level
 set_$CC_CHPAN=63.5  // Closed Hat Pan
 set_$CC_OHLVL=127   // Open Hat Level
 set_$CC_OHPAN=63.5  // Open Hat Pan
+set_$CC_LTLVL=127  // Low Tom Level
 set_$CC_LTPAN=63.5  // Low Tom Pan
 set_$CC_MTLVL=127   // Mid Tom Level
 set_$CC_MTPAN=63.5  // Mid Tom Pan
@@ -125,8 +126,8 @@ label_$CC_RSLVL=RS Level ($CC_RSLVL)
 label_$CC_RSPAN=RS Pan ($CC_RSPAN)
 label_$CC_SD1LVL=SD1 Level ($CC_SD1LVL)
 label_$CC_SD1PAN=SD1 Pan ($CC_SD1PAN)
-label_$CC_SD1LVL=SD2 Level ($CC_SD1LVL)
-label_$CC_SD1PAN=SD2 Pan ($CC_SD1PAN)
+label_$CC_SD2LVL=SD2 Level ($CC_SD2LVL)
+label_$CC_SD2PAN=SD2 Pan ($CC_SD2PAN)
 label_$CC_CPLVL=HC Level ($CC_CPLVL)
 label_$CC_CPPAN=HC Pan ($CC_CPPAN)
 label_$CC_CHLVL=CH Level ($CC_CHLVL)
